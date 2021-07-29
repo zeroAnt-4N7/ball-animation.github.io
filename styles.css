@@ -1,0 +1,57 @@
+
+.container{
+    width:385px;
+    height: 100px;
+    position: fixed;
+    top:20%;
+}
+.ball{
+    background-color: green;
+    position: absolute;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    border:none;
+    border-radius: 50%;
+    animation: ball 1s linear 0s infinite alternate;
+}
+.stick2{
+    background-color: blue;
+    position: absolute;
+    left:275px;
+    width: 25px;
+    height: 100px;
+    border:none;
+    border-radius: 20%;
+    transform-origin: 50% 100%;
+    animation: stick2 2s linear 0.7s infinite;
+
+}
+.stick1{
+    background-color: blue;
+    position: absolute;
+    left: 60px;
+    width: 25px;
+    height: 100px;
+    border:none;
+    border-radius: 20%;
+    transform-origin: 50% 100%;
+    animation: stick1 2s linear 0s infinite;
+
+}
+@keyframes ball{
+    from{transform: translateX(0px);}
+    to{transform: translateX(475%);}
+}
+@keyframes stick1{
+    from{transform:rotateZ(-45deg);}
+    50%{transform:rotateZ(0);}
+    93%{transform:rotateZ(0);}
+    100%{transform:rotateZ(-45deg);}
+}
+@keyframes stick2{
+    from{transform:rotateZ(0);}
+    5%{transform:rotateZ(0);}
+    13%{transform:rotateZ(45deg);}
+    50%, 100%{transform:rotateZ(0);}
+}
